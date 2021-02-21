@@ -4,7 +4,7 @@ export const InfoContainer = styled.div`
   color: #fff;
   background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
 
-  @media screen and (max-size: 768px) {
+  @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
 `;
@@ -26,27 +26,27 @@ export const InfoRow = styled.div`
   /* min: auto, max:1 flex ratio, -- 1 flex: 1 chunk of entire content */
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
-  /* use the matrix to assign propotion of each content in grid, col2: image col */
 
+  /* use the matrix to assign propotion of each content in grid, col2: image col */
   grid-template-areas: ${({ imgStart }) =>
     imgStart ? `'col2 col1'` : `'col1 col2'`};
 
   @media screen and (max-width: 768px) {
     grid-template-areas: ${({ imgStart }) =>
-      imgStart ? `'col1''col2` : `'col1 col1' 'col2 col2'`};
+      imgStart ? `'col1' 'col2'` : `'col1 col1'  'col2 col2'`};
   }
 `;
 
 export const Column1 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
-  grid-area: "col1";
+  grid-area: col1;
 `;
 
 export const Column2 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
-  grid-area: "col2";
+  grid-area: col2;
 `;
 
 export const TextWrapper = styled.div`
@@ -62,11 +62,11 @@ export const TopLine = styled.p`
   font-weight: 700;
   letter-spacing: 1.4px;
   text-transform: uppercase;
-  margin-bottom: 16pxl;
+  margin-bottom: 16px;
 `;
 
 export const Heading = styled.h1`
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-size: 48px;
   line-height: 1.1rem;
   font-weight: 600;
@@ -83,7 +83,7 @@ export const Subtitle = styled.p`
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 35px;
-  color: ${({ darkText }) => (darkText ? "#010606" : "#fff")};
+  color: ${({ LightTextDesc }) => (LightTextDesc ? "#fff" : "#010606")};
 `;
 
 export const BtnWrap = styled.div`

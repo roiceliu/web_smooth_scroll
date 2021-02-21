@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../ButtonElements";
+
 import {
   BtnWrap,
   Column1,
@@ -20,6 +21,7 @@ const InfoSection = ({
   id,
   topLine,
   lightText,
+  LightTextDesc,
   headline,
   imgStart,
   darkText,
@@ -39,7 +41,7 @@ const InfoSection = ({
               <TextWrapper>
                 <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle darkText={darkText}>{description}</Subtitle>
+                <Subtitle LightTextDesc={LightTextDesc}>{description}</Subtitle>
                 <BtnWrap>
                   <Button
                     to="home"
